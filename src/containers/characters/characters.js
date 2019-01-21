@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HeroCardList from "../../components/Hero-Cards/Hero-Card-List/Hero-Card-List.js";
 
-class Villains extends Component {
+class Characters extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,7 +9,7 @@ class Villains extends Component {
         {
           name: "Hulk",
           id: 1,
-          description: "3 meter tall green beast"
+          description: "3 meter tall greean beast"
         }
       ]
     };
@@ -20,22 +20,26 @@ class Villains extends Component {
     this.setState({
       heroList: [
         {
-          name: "Loki",
+          name: "Hulk",
           id: 1,
-          description:
-            "Loki is an odd character. He lives among the Gods in Asgard. He’s known for his tricks, deception and treachery."
+          description: "3 meter tall green beast"
         },
         {
-          name: "Ultron",
+          name: "Iron man",
           id: 2,
-          description:
-            "Ultron is system with all information from the internet and an army of self produced droids."
+          description: "a genius without any superpower, except his brain"
         },
         {
-          name: "Thanos",
+          name: "Black Widow",
           id: 3,
           description:
-            "Thanos is the leader of the Titan army and the strongest character in marvel universe till now"
+            "A gorgeous woman, with extraordinary martial arts skills"
+        },
+        {
+          name: "Hawk",
+          id: 4,
+          description:
+            "A former shield agent, probably the best archer in the world"
         }
       ]
     });
@@ -47,6 +51,7 @@ class Villains extends Component {
     ) : (
       <p>There are no heroes here</p>
     );
+
     return (
       <div
         style={{
@@ -63,4 +68,4 @@ class Villains extends Component {
   }
 }
 
-export default Villains;
+export default Characters;

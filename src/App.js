@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
 import "./App.css";
-import HeroList from "./containers/hero-list/hero-list";
-import Villains from "./containers/villains/villains";
 
+import Characters from "./containers/characters/characters";
 import Footer from "./components/Footer/Footer";
 import NavigationItems from "./components/Navigation/NavigationItems/NavigationItems";
 
@@ -13,11 +12,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavigationItems />
+        <NavigationItems
+          navItems={[
+            { name: "Characters", link: "Characters" },
+            { name: "Discussion", link: "Discussion" },
+            { name: "History", link: "History" }
+          ]}
+        />
         <Switch>
-          <Route path="/Heroes" component={HeroList} />
-          <Route path="/Villains" component={Villains} />
-          <Route path="/Villains/" />
+          <Route exact path="/Characters" component={Characters} />
+          <Route exact path="/Discussion" component={Characters} />
+          <Route exact path="/History/" />
         </Switch>
         <Footer />
       </div>
